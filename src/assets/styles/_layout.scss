@@ -1,0 +1,8 @@
+.wrapper {
+	position: relative;
+}
+
+.container {
+	@include make-container($gutter: 0);
+	@include make-container-max-widths;
+}
