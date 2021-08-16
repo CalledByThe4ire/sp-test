@@ -9,6 +9,13 @@
 @import 'layout';
 
 // ======= COMPONENTS =======
+@import '../../components/icon/icon';
+@import '../../components/page-header/page-header';
+@import '../../components/search/search';
+@import '../../components/cart/cart';
+@import '../../components/trigger/trigger';
+@import '../../components/logo/logo';
+@import '../../components/main-nav/main-nav';
 
 // ======= PAGES =======
 @import 'pages/main';

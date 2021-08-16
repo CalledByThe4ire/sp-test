@@ -1,0 +1,15 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro logo(props) %}
+	<h1 class="logo {{props.cls}}">
+		<a href="/" class="logo__link">
+			{{
+			icon({
+				iconName: 'sp-logo',
+				className: 'logo__icon icon icon--logo',
+				attributes: 'style="width: 89px; height: 32px;"'
+			})
+		}}
+		</a>
+	</h1>
+{% endmacro %}

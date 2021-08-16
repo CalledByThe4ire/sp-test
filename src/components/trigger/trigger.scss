@@ -1,0 +1,9 @@
+.trigger {
+	display: none;
+	width: 29px;
+	margin-left: 25px;
+
+	@include media-breakpoint-down(sm) {
+		display: flex;
+	}
+}

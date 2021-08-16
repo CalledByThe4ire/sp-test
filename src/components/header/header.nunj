@@ -1,0 +1,33 @@
+<header class="header">
+	<div class="header__container">
+		{{ logo({ cls: "header__logo" }) }}
+		{{ mainNav({ cls: "header__main-nav" }) }}
+		<a href="#" class="header__search search">
+			{{
+				icon({
+					iconName: 'search',
+					className: 'search__icon icon icon--search',
+					attributes: 'style="width: 24px; height: 24px;"'
+				})
+			}}</a
+		>
+		<a href="#" class="header__cart cart" data-counter="2">
+			{{
+				icon({
+					iconName: 'cart',
+					className: 'cart__icon icon icon--cart',
+					attributes: 'style="width: 24px; height: 21px;"'
+				})
+			}}
+		</a>
+		<a href="#" class="header__trigger trigger">
+			{{
+				icon({
+					iconName: 'burger',
+					className: 'burger__icon icon icon--burger',
+					attributes: 'style="width: 29px; height: 22px;"'
+				})
+			}}
+		</a>
+	</div>
+</header>

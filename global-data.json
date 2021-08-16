@@ -1,1 +1,28 @@
-{}
+{
+	"mainNavItems": [
+		{
+			"name": "Women’s",
+			"path": "#"
+		},
+		{
+			"name": "Men’s",
+			"path": "#"
+		},
+		{
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Travel",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
+			"path": "#"
+		}
+	]
+}

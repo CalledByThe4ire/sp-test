@@ -1,0 +1,23 @@
+.search {
+	$search: &;
+	display: flex;
+	margin-left: auto;
+	margin-right: 25px;
+
+	&__icon {
+		fill: #000;
+		transition: fill $default-transition-duration $default-transition-function;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		#{$search}__icon {
+			fill: $primary-color;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

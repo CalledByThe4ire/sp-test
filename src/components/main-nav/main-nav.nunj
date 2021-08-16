@@ -1,0 +1,12 @@
+{% macro mainNav(props) %}
+<nav class="main-nav {{props.cls}}">
+	<ul class="main-nav__list">
+		{% for item in mainNavItems %}
+		<li class="main-nav__item{% if loop.index == loop.length %} main-nav__item--active{% endif %}">
+			<a href="{{ item.path }}" class="main-nav__link"><span>{{ item.name }}</span></a>
+		</li>
+
+		{% endfor %}
+	</ul>
+</nav>
+{% endmacro %}

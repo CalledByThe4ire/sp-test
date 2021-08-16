@@ -1,0 +1,30 @@
+.logo {
+	$logo: &;
+	display: flex;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		height: inherit;
+
+		&:hover,
+		&:active,
+		&:focus {
+			#{$logo}__icon {
+				fill: $primary-color;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__icon {
+		fill: #000;
+		transition: fill $default-transition-duration $default-transition-function;
+	}
+}

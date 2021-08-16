@@ -1,7 +1,13 @@
 {% extends "../ext/base.nunj" %}
 
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/logo/logo.nunj" import logo %}
+{% from "../../components/main-nav/main-nav.nunj" import mainNav %}
+
+{% block title %}SP Test{% endblock title %}
+
 {% block content %}
-	<div class="container">
-		{#  #}
-	</div>;
+	<div class="app__container">
+		{% include '../../components/page-header/page-header.nunj' %}
+	</div>
 {% endblock content %}

@@ -1,0 +1,28 @@
+.page-header {
+	display: flex;
+	flex-basis: 100%;
+	min-height: 80px;
+	border-bottom: 1px solid #cfcfcf;
+
+	&__container {
+		display: flex;
+		flex-basis: 100%;
+		align-items: center;
+		flex-flow: row wrap;
+
+		@include make-container($gutter: 0);
+		@include make-container-max-widths;
+	}
+
+	&__search,
+	&__cart,
+	&__trigger {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

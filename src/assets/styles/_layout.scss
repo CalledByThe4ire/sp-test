@@ -1,8 +1,8 @@
-.wrapper {
+.app {
 	position: relative;
-}
+	min-width: map-get($grid-breakpoints, sm);
 
-.container {
-	@include make-container($gutter: 0);
-	@include make-container-max-widths;
+	&__container {
+		@include make-container($gutter: 0);
+	}
 }

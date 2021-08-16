@@ -3,6 +3,9 @@ import { gsap } from 'gsap';
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
 
+import './store';
+import '../../components/page-header/page-header';
+
 global.gsap = gsap;
 
 gsap.defaults({
