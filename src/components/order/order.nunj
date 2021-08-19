@@ -1,0 +1,9 @@
+{% from "../cart-details/cart-details.nunj" import cartDetails %}
+{% from "../payment-details/payment-details.nunj" import paymentDetails %}
+
+{% macro order(props) %}
+	<aside class="order {{props.cls}}">
+		{{cartDetails({ cls: "order__cart-details" })}}
+		{{paymentDetails({ cls: "order__payment-details" })}}
+	</aside>
+{% endmacro %}

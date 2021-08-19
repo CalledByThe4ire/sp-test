@@ -1,0 +1,12 @@
+.main-content {
+	display: flex;
+	flex-basis: 100%;
+
+	&__container {
+		display: flex;
+		flex-basis: 100%;
+
+		@include make-container($gutter: 0);
+		@include make-container-max-widths;
+	}
+}

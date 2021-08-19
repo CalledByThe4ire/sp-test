@@ -6,7 +6,7 @@
 	&::after {
 		content: attr(data-counter);
 		position: absolute;
-		top: 40%;
+		top: -3px;
 		right: -6px;
 		display: flex;
 		justify-content: center;
@@ -19,13 +19,19 @@
 		padding-left: 4px;
 		border-radius: 50%;
 		background-color: $primary-color;
-		transform: translateY(-40%);
+		transform: translateY(-10%);
 		font-family: Roboto, Arial, sans-serif;
 		font-size: 10px;
 		line-height: 1;
 		font-weight: 400;
 		color: #fff;
 		text-align: center;
+	}
+
+	&--is-empty {
+		&::after {
+			display: none;
+		}
 	}
 
 	&__icon {

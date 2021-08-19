@@ -1,7 +1,7 @@
-<header class="header">
-	<div class="header__container">
-		{{ logo({ cls: "header__logo" }) }}
-		{{ mainNav({ cls: "header__main-nav" }) }}
+<header class="page-header">
+	<div class="page-header__container">
+		{{ logo({ cls: "page-header__logo" }) }}
+		{{ mainNav({ cls: "page-header__main-nav" }) }}
 		<a href="#" class="header__search search">
 			{{
 				icon({
@@ -24,7 +24,7 @@
 			{{
 				icon({
 					iconName: 'burger',
-					className: 'burger__icon icon icon--burger',
+					className: 'trigger__icon icon icon--burger',
 					attributes: 'style="width: 29px; height: 22px;"'
 				})
 			}}

@@ -1,0 +1,20 @@
+{% macro paymentDetails(props) %}
+<table class="payment-details {{ props.cls }}">
+	<tr class="payment-details__row">
+		<td class="payment-details__col">Subtotal</td>
+		<td class="payment-details__col" data-name="subtotal"></td>
+	</tr>
+	<tr class="payment-details__row">
+		<td class="payment-details__col">Tax</td>
+		<td class="payment-details__col" data-name="tax"></td>
+	</tr>
+	<tr class="payment-details__row">
+		<td class="payment-details__col">Shipping</td>
+		<td class="payment-details__col" data-name="shipping"></td>
+	</tr>
+	<tr class="payment-details__row">
+		<td class="payment-details__col">Total</td>
+		<td class="payment-details__col" data-name="total"></td>
+	</tr>
+</table>
+{% endmacro %}

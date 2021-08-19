@@ -1,0 +1,7 @@
+{% from "../order/order.nunj" import order %}
+
+<main class="main-content">
+	<div class="main-content__container">
+		{{ order({ cls: "main-content__order" }) }}
+	</div>
+</main>

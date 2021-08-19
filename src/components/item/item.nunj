@@ -1,0 +1,17 @@
+{% macro item(props) %}
+<div class="item">
+	<div class="item__container">
+		<img class="item__image" src="" alt="" />
+		<div class="item__inner">
+			<p class="item__name"></p>
+			<div class="item__quantity">
+				<button class="item__btn item__btn--dec">-</button>
+				<span>1</span>
+				<button class="item__btn item__btn--inc">+</button>
+			</div>
+			<span class="item__price"></span>
+		</div>
+		<button class="item__btn item__btn--remove"></button>
+	</div>
+</div>
+{% endmacro %}

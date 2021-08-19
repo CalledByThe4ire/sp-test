@@ -3,8 +3,10 @@ import { gsap } from 'gsap';
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
 
-import './store';
 import '../../components/page-header/page-header';
+import '../../components/cart/cart';
+import '../../components/cart-details/cart-details';
+import '../../components/payment-details/payment-details';
 
 global.gsap = gsap;
 

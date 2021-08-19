@@ -9,5 +9,6 @@
 {% block content %}
 	<div class="app__container">
 		{% include '../../components/page-header/page-header.nunj' %}
+		{% include '../../components/main-content/main-content.nunj' %}
 	</div>
 {% endblock content %}
