@@ -1,6 +1,8 @@
 {% macro cartDetails(props) %}
 <article class="cart-details {{ props.cls }}">
-	<h2 class="cart-details__heading">My&nbsp;basket</h2>
-	<ul class="cart-details__list"></ul>
+	<div class="cart-details__container">
+		<h2 class="cart-details__heading">My&nbsp;basket</h2>
+		<ul class="cart-details__list"></ul>
+	</div>
 </article>
 {% endmacro %}

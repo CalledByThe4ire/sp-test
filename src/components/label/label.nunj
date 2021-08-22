@@ -1,0 +1,2 @@
+{% macro label(props) %}
+	<label class="label {{prop.cls}}">{{ text }}</label>

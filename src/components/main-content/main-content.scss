@@ -1,10 +1,12 @@
 .main-content {
+	position: relative;
 	display: flex;
-	flex-basis: 100%;
+	width: 100%;
+	height: inherit;
 
 	&__container {
 		display: flex;
-		flex-basis: 100%;
+		height: inherit;
 
 		@include make-container($gutter: 0);
 		@include make-container-max-widths;

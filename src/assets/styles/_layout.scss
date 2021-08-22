@@ -1,8 +1,13 @@
 .app {
 	position: relative;
 	min-width: map-get($grid-breakpoints, sm);
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
 
 	&__container {
 		@include make-container($gutter: 0);
+		width: inherit;
+		height: inherit;
 	}
 }

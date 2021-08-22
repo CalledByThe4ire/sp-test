@@ -1,18 +1,22 @@
-.cart-details {
+.order-discount {
 	display: flex;
 	flex-flow: row wrap;
 	width: inherit;
 	height: auto;
-	overflow-y: auto;
 
-	&--invisible {
-		display: none;
+	&::before {
+		content: '';
+		position: absolute;
+		top: auto;
+		width: 100%;
+		height: 1px;
+		background-color: #cfcfcf;
 	}
 
 	&__container {
 		width: inherit;
-		height: inherit;
 		padding: 40px;
+		padding-right: 10px;
 	}
 
 	&__heading {
@@ -22,5 +26,14 @@
 		line-height: 21px;
 		font-weight: 700;
 		margin-bottom: 30px;
+	}
+
+	&__form {
+		display: flex;
+		width: 100%;
+	}
+
+	&__input {
+		margin-right: 10px;
 	}
 }

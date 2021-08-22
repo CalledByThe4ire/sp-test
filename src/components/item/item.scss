@@ -1,0 +1,108 @@
+.item {
+	$item: &;
+	display: flex;
+
+	&:not(:last-child) {
+		margin-bottom: 40px;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__inner {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		min-height: 70px;
+		margin-left: 10px;
+	}
+
+	&__quantity {
+		display: flex;
+		flex-basis: 100%;
+		justify-content: flex-start;
+		margin-top: auto;
+	}
+
+	&__count {
+		margin-left: 18px;
+		margin-right: 18px;
+	}
+
+	&__price {
+		margin-left: 25px;
+	}
+
+	&__name {
+		margin-bottom: 10px;
+	}
+
+	&__btn {
+		display: flex;
+		padding: 0;
+		font: inherit;
+		color: inherit;
+		border: none;
+		outline: none;
+		background: none;
+
+		&--remove {
+			position: absolute;
+			top: 0;
+			right: -30px;
+
+			#{$item}-btn__icon {
+				fill: #cfcfcf;
+			}
+		}
+
+		&--inc,
+		&--dec {
+			width: 20px;
+			height: 20px;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			line-height: 1;
+			color: #000;
+			border: 1px solid #000;
+			border-radius: 50%;
+			transition: all $default-transition-duration $default-transition-function;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $primary-color;
+				border: 1px solid $primary-color;
+			}
+
+			span {
+				pointer-events: none;
+			}
+		}
+
+		&--dec {
+			span {
+				position: relative;
+				top: -2px;
+			}
+		}
+
+		#{$item}-btn__icon {
+			transition: fill $default-transition-duration $default-transition-function;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			#{$item}-btn__icon {
+				fill: $primary-color;
+			}
+		}
+	}
+}

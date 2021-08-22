@@ -1,0 +1,4 @@
+{% macro paymentProcess(props) %}
+<div class="payment-process {{ props.cls }}">
+</div>
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% from "../input/input.nunj" import input %}
+
+{% macro orderDiscount(props) %}
+	<article class="order-discount {{ props.cls }}">
+		<div class="order-discount__container">
+			<h2 class="order-discount__heading">Promo&nbsp;code</h2>
+			<form class="order-discount__form" action="">
+				{{input(name = 'discount', cls = 'order-discount__input', placeholder='Placeholder Text')}}
+				{{input(cls = 'order-discount__button button', type = "submit", value = 'Apply')}}
+			</form>
+		</div>
+	</article>
+{% endmacro %}

@@ -1,9 +1,12 @@
 {% from "../cart-details/cart-details.nunj" import cartDetails %}
-{% from "../payment-details/payment-details.nunj" import paymentDetails %}
+{% from "../order-discount/order-discount.nunj" import orderDiscount %}
+{% from
+"../payment-details/payment-details.nunj" import paymentDetails %}
 
 {% macro order(props) %}
-	<aside class="order {{props.cls}}">
-		{{cartDetails({ cls: "order__cart-details" })}}
-		{{paymentDetails({ cls: "order__payment-details" })}}
+	<aside class="order {{ props.cls }}">
+		{{ cartDetails({ cls: 'order__cart-details' }) }}
+		{{ orderDiscount({ cls: 'order__order-discount' }) }}
+		{{ paymentDetails({ cls: 'order__payment-details' }) }}
 	</aside>
 {% endmacro %}

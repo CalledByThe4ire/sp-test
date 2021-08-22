@@ -1,7 +1,9 @@
+{% from "../payment-process/payment-process.nunj" import paymentProcess %}
 {% from "../order/order.nunj" import order %}
 
 <main class="main-content">
 	<div class="main-content__container">
+		{{ paymentProcess({ cls: "main-content__payment-process" }) }}
 		{{ order({ cls: "main-content__order" }) }}
 	</div>
 </main>
