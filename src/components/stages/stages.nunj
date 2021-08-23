@@ -1,9 +1,10 @@
 {% macro stages(props) %}
 	<ul class="stages {{ props.cls }}">
-		{% for stage in paymentProcessStages %}
-			<li class="stages__stage">
-				{{ stage}}</a>
-		</li>
-	{% endfor %}
-</ul>
+		{% for stage in paymentProcessStages | reverse %}
+			<li class="stages__stage stage">
+				<span class="stage__index">{{loop.length - loop.index0}}</span>
+				<span class="stage__caption">{{stage | capitalize}}</span>
+			</li>
+		{% endfor %}
+	</ul>
 {% endmacro %}
