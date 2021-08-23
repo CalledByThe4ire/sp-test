@@ -1,0 +1,9 @@
+{% macro stages(props) %}
+	<ul class="stages {{ props.cls }}">
+		{% for stage in paymentProcessStages %}
+			<li class="stages__stage">
+				{{ stage}}</a>
+		</li>
+	{% endfor %}
+</ul>
+{% endmacro %}

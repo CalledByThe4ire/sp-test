@@ -1,0 +1,163 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro paymentInfo(props) %}
+	{% for stage in paymentProcessStages %}
+		{% if stage === "account" %}
+		<form action="" class="payment-info payment-info--invisible payment-info--{{stage}}">
+			<fieldset>
+				<legend>{{stage | capitalize}} Information</legend>
+			</fieldset>
+		</form>
+		{% endif %}
+
+		{% if stage === "shipping" %}
+		<form action="" class="payment-info payment-info--invisible payment-info--{{stage}}">
+			<fieldset>
+				<legend>{{stage | capitalize}} Information</legend>
+			</fieldset>
+		</form>
+		{% endif %}
+
+		{% if stage === "billing" %}
+			<form action="" class="payment-info payment-info--invisible payment-info--{{stage}}">
+				<fieldset>
+					<legend>{{stage | capitalize}} Information</legend>
+					<ul class="payment-info__payment-method">
+						<input
+						type="radio"
+						id="paymentMethod1"
+			 			name="payment-method"
+						value="credit-card"
+						checked
+					>
+						<label for="paymentMethod1">Pay with Credit Card</label>
+
+						<input
+						type="radio"
+						id="paymentMethod2"
+			 			name="payment-method"
+						value="paypal">
+						<label for="paymentMethod2">
+							{{
+							icon({
+								iconName: 'pp-logo',
+								className: 'payment-info__icon icon icon--pp-logo',
+								attributes: 'style="width: 85px; height: 23px;"'
+							})
+						}}
+						</label>
+					</ul>
+				</fieldset>
+
+				<div class="payment-info__inner">
+					<div class="payment-info__field payment-info-field">
+						<label
+						class="payment-info-field__label"
+						for="credit-card-name">Name on card</label>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-name"
+						id="credit-card-name"
+						placeholder="Placeholder Text"
+						required
+					>
+					</div>
+
+					<div class="payment-info__field payment-info-field">
+						<label
+						class="payment-info-field__label"
+						for="credit-card-number">Card number</label>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-number-1"
+						id="credit-card-number"
+						required
+					>
+						<input
+						class="payment-info-field__input"
+						type="text" name="credit-card-number-2"
+						required>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-number-3"
+						required>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-number-4"
+						required>
+					</div>
+
+					<div class="payment-info__field payment-info-field">
+						<a
+						class="payment-info-field__link"
+						href="#"
+						title="Card Verification Value/Code"
+					>?</a>
+						<label
+						class="payment-info-field__label"
+						for="credit-card-expire-date"
+					>Expire date</label>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-expire-date"
+						id="credit-card-expire-date"
+						required
+					>
+					</div>
+
+					<div class="payment-info__field payment-info-field">
+						<label
+						class="payment-info-field__label"
+						for="credit-card-cvv"
+					>CVV code</label>
+						<input
+						class="payment-info-field__input"
+						type="text"
+						name="credit-card-cvv"
+						id="credit-card-cvv"
+						required
+					>
+					</div>
+				</div>
+
+				<ul class="payment-info__payment-contracts">
+					<input
+					class="payment-info-field__input"
+					type="checkbox"
+					id="save"
+					name="save"
+					checked
+				>
+					<label
+					class="payment-info-field__label"
+					for="save"
+				>Save information of this credit card</label>
+
+					<input
+					class="payment-info-field__input"
+					type="checkbox"
+					id="rules"
+					name="rules">
+					<label
+					class="payment-info-field__label"
+					for="rules"
+				>I&nbsp;accept the terms and comditions and the Privacy Policies</label>
+				</ul>
+			</form>
+		{% endif %}
+
+		{% if stage === "review" %}
+		<form action="" class="payment-info payment-info--invisible payment-info--{{stage}}">
+			<fieldset>
+				<legend>{{stage | capitalize}} Information</legend>
+			</fieldset>
+		</form>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endmacro %}

@@ -7,6 +7,8 @@ import '../../components/page-header/page-header';
 import '../../components/cart/cart';
 import '../../components/cart-details/cart-details';
 import '../../components/payment-details/payment-details';
+import '../../components/stages/stages';
+import '../../components/payment-info/payment-info';
 
 global.gsap = gsap;
 

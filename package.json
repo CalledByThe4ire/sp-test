@@ -90,8 +90,9 @@
     "gsap": "^3.7.0",
     "gulp-dart-sass": "^1.0.2",
     "i": "^0.3.6",
+    "imask": "^6.1.0",
     "normalize.scss": "^0.1.0",
-    "npm": "^7.20.6",
+    "npm": "^7.21.0",
     "redux": "^4.1.1",
     "regenerator-runtime": "^0.13.5",
     "sass": "^1.35.1"

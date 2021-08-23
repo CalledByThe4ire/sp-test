@@ -1,5 +1,0 @@
-{% macro button(props) %}
-<button class="button {{ props.cls }}">
-	{{props.value | escape}}
-</button>
-{% endmacro %}

@@ -24,5 +24,6 @@
 			"name": "Sale",
 			"path": "#"
 		}
-	]
+	],
+	"paymentProcessStages": ["account", "shipping", "billing", "review"]
 }
