@@ -22,30 +22,34 @@
 			<form action="" class="payment-info payment-info--invisible payment-info--{{stage}}">
 				<fieldset>
 					<legend>{{stage | capitalize}} Information</legend>
-					<ul class="payment-info__payment-method">
-						<input
-						type="radio"
-						id="paymentMethod1"
-			 			name="payment-method"
-						value="credit-card"
-						checked
-					>
-						<label for="paymentMethod1">Pay with Credit Card</label>
-
-						<input
-						type="radio"
-						id="paymentMethod2"
-			 			name="payment-method"
-						value="paypal">
-						<label for="paymentMethod2">
-							{{
-							icon({
-								iconName: 'pp-logo',
-								className: 'payment-info__icon icon icon--pp-logo',
-								attributes: 'style="width: 85px; height: 23px;"'
-							})
-						}}
+					<ul class="payment-info__payment-methods-list">
+						<li class="payment-info__payment-methods-list-item">
+							<input
+								type="radio"
+								id="paymentMethod1"
+								name="payment-method"
+								value="credit-card"
+								checked
+							>
+							<label for="paymentMethod1">Pay with Credit Card</label>
+						</li>
+						<li class="payment-info__payment-methods-list-item">
+							<input
+								type="radio"
+								id="paymentMethod2"
+								name="payment-method"
+								value="paypal"
+							>
+							<label for="paymentMethod2">
+								{{
+								icon({
+									iconName: 'pp-logo',
+									className: 'payment-info__icon icon icon--pp-logo',
+									attributes: 'style="width: 85px; height: 23px;"'
+								})
+							}}
 						</label>
+						</li>
 					</ul>
 				</fieldset>
 
@@ -92,11 +96,6 @@
 					</div>
 
 					<div class="payment-info__field payment-info-field">
-						<a
-						class="payment-info-field__link"
-						href="#"
-						title="Card Verification Value/Code"
-					>?</a>
 						<label
 						class="payment-info-field__label"
 						for="credit-card-expire-date"
@@ -115,6 +114,12 @@
 						class="payment-info-field__label"
 						for="credit-card-cvv"
 					>CVV code</label>
+					<a
+					class="payment-info-field__link"
+					href="#"
+					title="Card Verification Value/Code"
+					>?
+					</a>
 						<input
 						class="payment-info-field__input"
 						type="text"
@@ -125,28 +130,33 @@
 					</div>
 				</div>
 
-				<ul class="payment-info__payment-contracts">
-					<input
-					class="payment-info-field__input"
-					type="checkbox"
-					id="save"
-					name="save"
-					checked
-				>
-					<label
-					class="payment-info-field__label"
-					for="save"
-				>Save information of this credit card</label>
+				<ul class="payment-info__payment-contracts-list">
+					<li class="payment-info__payment-contracts-list-item">
+						<input
+						class="payment-info-field__input"
+						type="checkbox"
+						id="save"
+						name="save"
+						checked
+						>
+						<label
+						class="payment-info-field__label"
+						for="save"
+						>Save information of this credit card</label>
+						</li>
 
-					<input
-					class="payment-info-field__input"
-					type="checkbox"
-					id="rules"
-					name="rules">
-					<label
-					class="payment-info-field__label"
-					for="rules"
-				>I&nbsp;accept the terms and comditions and the Privacy Policies</label>
+					<li class="payment-info__payment-contracts-list-item">
+						<input
+							class="payment-info-field__input"
+							type="checkbox"
+							id="rules"
+							name="rules"
+						>
+						<label
+						class="payment-info-field__label"
+						for="rules"
+						>I&nbsp;accept the terms and comditions and the Privacy Policies</label>
+					</li>
 				</ul>
 			</form>
 		{% endif %}

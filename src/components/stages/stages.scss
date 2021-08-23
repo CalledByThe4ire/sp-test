@@ -3,6 +3,8 @@ $stage-index-size: 18px;
 $border-width: 1px;
 
 $container-size-desktop-HD: 1200px;
+$container-size-desktop: 630px;
+$container-size-tablet: 535px;
 
 .stages {
 	position: relative;
@@ -10,6 +12,11 @@ $container-size-desktop-HD: 1200px;
 	flex-flow: row-reverse nowrap;
 	justify-content: space-between;
 	margin-bottom: 60px;
+	transition: all $default-transition-duration $default-transition-function;
+
+	@include media-breakpoint-between(sm, md) {
+		padding-left: 15px;
+	}
 }
 
 .stage {
@@ -60,8 +67,8 @@ $container-size-desktop-HD: 1200px;
 		margin-bottom: 10px;
 		font-size: 10px;
 		line-height: 1;
-		color: #d5d5d5;
-		border: #{$border-width} solid #d5d5d5;
+		color: darken($color: $secondary-color, $amount: 10%);
+		border: #{$border-width} solid darken($color: $secondary-color, $amount: 10%);
 		border-radius: 50%;
 		background-color: #fff;
 
@@ -74,7 +81,16 @@ $container-size-desktop-HD: 1200px;
 			display: flex;
 			width: calc(#{$container-size-desktop-HD} / #{$stages-count} + 100% + #{$border-width} * 4);
 			height: 1px;
-			background-color: #d5d5d5;
+			background-color: darken($color: $secondary-color, $amount: 10%);
+			transition: all $default-transition-duration $default-transition-function;
+
+			@include media-breakpoint-between(sm, md) {
+				width: calc(#{$container-size-desktop} / #{$stages-count} + 100% + #{$border-width} * 4);
+			}
+
+			@include media-breakpoint-down(sm) {
+				width: calc(#{$container-size-tablet} / #{$stages-count} + 100% + #{$border-width} * 4);
+			}
 		}
 	}
 }

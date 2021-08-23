@@ -4,6 +4,7 @@
 	width: 380px;
 	height: inherit;
 	border-left: 1px solid #cfcfcf;
+	transition: all $default-transition-duration $default-transition-function;
 
 	@include media-breakpoint-down(sm) {
 		display: none;
